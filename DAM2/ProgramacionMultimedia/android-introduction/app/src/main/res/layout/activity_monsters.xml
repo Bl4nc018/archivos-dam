@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!-- Ejercicio #11: -->
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biblioteca de monstruos"
+        android:layout_marginTop="10dp"
+        android:textSize="23sp"
+        android:textColor="#050401"
+        android:id="@+id/monstersTitle"/>
+
+    <!-- Ejercicio #16: -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/monstersTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        />
+
+
+
+
+    <!-- Ejercicio #14:
+    Hace falta disponer de la librería de Google Material para usar BottomNavigationView.
+    Para ello, basta con que en el archivo build.gradle se indique en
+    'dependencies' la línea:
+        implementation 'com.google.android.material:material:x.y.z'
+    Con la versión x.y.z de la librería deseada.
+
+    Esta línea YA está añadida en nuestro proyecto
+    -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bottom_menu"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

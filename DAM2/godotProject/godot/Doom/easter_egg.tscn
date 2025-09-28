@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3ap04kpyqxo0"]
+
+[ext_resource type="Texture2D" uid="uid://bcwtha8xdv27m" path="res://assets/easteregg-removebg-preview.png" id="1_cy7du"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_valya"]
+
+[node name="EasterEgg" type="Area3D"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.6, 0)
+pixel_size = 0.009
+billboard = 2
+texture_filter = 2
+texture = ExtResource("1_cy7du")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("BoxShape3D_valya")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bshq8jbd472j0"
+path="res://.godot/imported/01. At Doom's Gate.mp3-d354991f0c18255c477352c9d98c9e68.mp3str"
+
+[deps]
+
+source_file="res://assets/01. At Doom's Gate.mp3"
+dest_files=["res://.godot/imported/01. At Doom's Gate.mp3-d354991f0c18255c477352c9d98c9e68.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

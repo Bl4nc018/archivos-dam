@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1rcyms6vnefd"
+path="res://.godot/imported/25. Salute.mp3-9d549f79c1cb53559fa54970d68b44ca.mp3str"
+
+[deps]
+
+source_file="res://assets/25. Salute.mp3"
+dest_files=["res://.godot/imported/25. Salute.mp3-9d549f79c1cb53559fa54970d68b44ca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq6s7i8a6fie3"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_18h41"]
+[ext_resource type="PackedScene" uid="uid://d17gfoa72fvuj" path="res://ui.tscn" id="2_oosg6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tii54"]
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_18h41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_tii54")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -1000)
+collision_mask = 3
+
+[node name="UI" parent="." instance=ExtResource("2_oosg6")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

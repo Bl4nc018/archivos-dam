@@ -1,0 +1,123 @@
+[gd_scene load_steps=4 format=3 uid="uid://co68p0d6rmla4"]
+
+[ext_resource type="Script" path="res://game_end.gd" id="1_h3c14"]
+
+[sub_resource type="FontFile" id="FontFile_3kqnk"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/35/5 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/35/8 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/35/5 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/35/8 = Vector2(0, 0)
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/35/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/35/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/35/0/glyphs/0/size = Vector2(0, 0)
+cache/0/35/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/35/0/glyphs/0/texture_idx = -1
+cache/0/35/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/35/5 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/35/8 = Vector2(0, 0)
+cache/0/35/5/glyphs/0/offset = Vector2(0, 0)
+cache/0/35/5/glyphs/0/size = Vector2(0, 0)
+cache/0/35/5/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/35/5/glyphs/0/texture_idx = -1
+cache/0/35/8/glyphs/0/offset = Vector2(0, 0)
+cache/0/35/8/glyphs/0/size = Vector2(0, 0)
+cache/0/35/8/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/35/8/glyphs/0/texture_idx = -1
+
+[sub_resource type="LabelSettings" id="LabelSettings_ikoou"]
+font = SubResource("FontFile_3kqnk")
+font_size = 35
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="GameEnd" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h3c14")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.643137, 1)
+
+[node name="GridContainer" type="GridContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -207.0
+offset_right = 1.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_constants/v_separation = 10
+
+[node name="Label" type="Label" parent="Menu/GridContainer"]
+texture_filter = 4
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "CONGRATULATIONS
+YOU WON!"
+label_settings = SubResource("LabelSettings_ikoou")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndGame" type="Button" parent="Menu/GridContainer"]
+layout_mode = 2
+text = "End Game"
+
+[node name="LineEdit" type="LineEdit" parent="Menu/GridContainer"]
+layout_mode = 2
+placeholder_text = "Enter your username:"
+
+[connection signal="pressed" from="Menu/GridContainer/EndGame" to="." method="_on_end_game_pressed"]
+[connection signal="text_submitted" from="Menu/GridContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]

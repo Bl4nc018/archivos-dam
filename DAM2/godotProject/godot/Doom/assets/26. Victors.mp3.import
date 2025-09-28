@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1qqwnatnhb54"
+path="res://.godot/imported/26. Victors.mp3-cd712d6fc72f93e450cef02815bac7f8.mp3str"
+
+[deps]
+
+source_file="res://assets/26. Victors.mp3"
+dest_files=["res://.godot/imported/26. Victors.mp3-cd712d6fc72f93e450cef02815bac7f8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

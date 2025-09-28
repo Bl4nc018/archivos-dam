@@ -1,0 +1,934 @@
+[gd_scene load_steps=94 format=3 uid="uid://di8njgua0v8yv"]
+
+[ext_resource type="Texture2D" uid="uid://jasu2mmfjir3" path="res://Texturas Doom/STEP4.png" id="1_3o3fp"]
+[ext_resource type="Texture2D" uid="uid://bv0ao1ovgilu0" path="res://Texturas Doom/COMPTILE.png" id="1_aaxjm"]
+[ext_resource type="Script" path="res://world.gd" id="1_bcw2s"]
+[ext_resource type="Texture2D" uid="uid://cefr8x5eso7vm" path="res://Texturas Doom/SKINTEK2.png" id="2_76jkf"]
+[ext_resource type="Texture2D" uid="uid://ytk3l3m7nfn6" path="res://Texturas Doom/TEKWALL2.png" id="3_8xfxk"]
+[ext_resource type="Texture2D" uid="uid://c34bt7xud4u4l" path="res://Texturas Doom/COMPUTE1.png" id="5_5235p"]
+[ext_resource type="Texture2D" uid="uid://cnvh1wrlec2d1" path="res://Texturas Doom/COMP2.png" id="6_jsl8v"]
+[ext_resource type="Texture2D" uid="uid://d3kwkb1n8outk" path="res://Texturas Doom/COMPSTA2.png" id="7_6htok"]
+[ext_resource type="Texture2D" uid="uid://cgotttmkbh3t5" path="res://Texturas Doom/WOOD1.png" id="8_jeg1h"]
+[ext_resource type="Texture2D" uid="uid://cmqn336egw61p" path="res://Texturas Doom/DOOR3.png" id="8_kiuia"]
+[ext_resource type="Texture2D" uid="uid://dvjirsdjxq0vl" path="res://Texturas Doom/WOOD3.png" id="9_n031b"]
+[ext_resource type="Texture2D" uid="uid://ffcs5t62k5gy" path="res://Texturas Doom/CRATE1.png" id="10_w7fvw"]
+[ext_resource type="Texture2D" uid="uid://dfuihjq6u74xk" path="res://Texturas Doom/CRATELIT.png" id="11_7ef5p"]
+[ext_resource type="Texture2D" uid="uid://dxi3dyhabfj8e" path="res://Texturas Doom/CRATWIDE.png" id="12_8yaoh"]
+[ext_resource type="Texture2D" uid="uid://byde7gkiaqhia" path="res://Texturas Doom/COMPSTA1.png" id="13_erv0a"]
+[ext_resource type="PackedScene" uid="uid://bq6s7i8a6fie3" path="res://player.tscn" id="16_uwakn"]
+[ext_resource type="PackedScene" uid="uid://b0x0uqasa3y0p" path="res://Enemigos/enemy.tscn" id="17_aymvu"]
+[ext_resource type="PackedScene" uid="uid://b5g7qotjcbt7d" path="res://Enemigos/guard.tscn" id="18_w7mu7"]
+[ext_resource type="PackedScene" uid="uid://bqjxlo6kksgvy" path="res://Coleccionables/ammo.tscn" id="19_jo2ui"]
+[ext_resource type="PackedScene" uid="uid://b3osbuf55obx8" path="res://Coleccionables/rifle.tscn" id="20_1cvnw"]
+[ext_resource type="PackedScene" uid="uid://kfc843eoif0p" path="res://Coleccionables/health.tscn" id="21_6mg56"]
+[ext_resource type="AudioStream" uid="uid://bhbtepiqgwcgx" path="res://assets/02. The Imp's Song.mp3" id="22_drpe6"]
+[ext_resource type="PackedScene" uid="uid://blm7q0ti77v0c" path="res://pause_menu.tscn" id="23_6m5ob"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dhvt"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fi5tb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ef42a"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ol45"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0leif"]
+albedo_texture = ExtResource("1_3o3fp")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxdnv"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jy8ra"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2aykk"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmbdt"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uacxn"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_in2jp"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvwul"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1uv8"]
+albedo_texture = ExtResource("1_aaxjm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dw0di"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbw32"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmha3"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_inkyp"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hj4aw"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mt8kl"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6h4y"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrhul"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bnjwq"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5fi4b"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g00j8"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ebhli"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lja40"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3d48"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pnu5"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tg1m"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhsqu"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grnx8"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c1v4"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4aas"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6a0y"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7jfh"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26ddi"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_165u2"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ja3by"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h0oip"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki4ao"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xw25c"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjhok"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f0d8"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmyo0"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5jor"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2k1lt"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b4uk8"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b7im7"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6kok"]
+albedo_texture = ExtResource("2_76jkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5artr"]
+albedo_texture = ExtResource("3_8xfxk")
+uv1_scale = Vector3(0.1, 1.5, 6)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_lsu7n"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rwgtc"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldxkf"]
+albedo_texture = ExtResource("5_5235p")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ieddw"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vt8no"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwinj"]
+albedo_texture = ExtResource("6_jsl8v")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aa7sa"]
+albedo_texture = ExtResource("5_5235p")
+uv1_scale = Vector3(0.2, 0.9, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ohqpj"]
+albedo_texture = ExtResource("7_6htok")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wb1p3"]
+albedo_texture = ExtResource("3_8xfxk")
+uv1_scale = Vector3(0.25, 1.4, 1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmfx7"]
+albedo_texture = ExtResource("3_8xfxk")
+uv1_scale = Vector3(0.251, 1.384, 0.996)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbtlw"]
+albedo_texture = ExtResource("8_kiuia")
+uv1_scale = Vector3(0.1, 1, 1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a5873"]
+albedo_texture = ExtResource("8_jeg1h")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ysu25"]
+albedo_texture = ExtResource("9_n031b")
+uv1_scale = Vector3(0.5, 1.6, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l06ap"]
+albedo_texture = ExtResource("10_w7fvw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xiuoq"]
+albedo_texture = ExtResource("11_7ef5p")
+uv1_scale = Vector3(0.5, 0.5, 0.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0axit"]
+albedo_texture = ExtResource("12_8yaoh")
+uv1_scale = Vector3(0.5, 0.6, 0.6)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_alh4l"]
+albedo_texture = ExtResource("12_8yaoh")
+uv1_scale = Vector3(0.5, 0.6, 0.6)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxg27"]
+albedo_texture = ExtResource("13_erv0a")
+
+[sub_resource type="Environment" id="Environment_4upfs"]
+background_mode = 1
+background_color = Color(0.45098, 0.45098, 0.45098, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yxbbq"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_bcw2s")
+
+[node name="Level1" type="Node3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 0, 2.5)
+material_override = SubResource("StandardMaterial3D_7dhvt")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground2" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 0, 1.5)
+material_override = SubResource("StandardMaterial3D_ef42a")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground3" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 0, 0.5)
+material_override = SubResource("StandardMaterial3D_3ol45")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground4" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 0, -0.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground5" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 0, -1.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground6" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.5, 0, -2.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground7" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0, 2.5)
+material_override = SubResource("StandardMaterial3D_nxdnv")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground8" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0, 1.5)
+material_override = SubResource("StandardMaterial3D_jy8ra")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground9" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0, 0.5)
+material_override = SubResource("StandardMaterial3D_2aykk")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground10" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0, -0.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground11" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0, -1.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground12" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.5, 0, -2.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground13" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0, 2.5)
+material_override = SubResource("StandardMaterial3D_xmbdt")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground14" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0, 1.5)
+material_override = SubResource("StandardMaterial3D_uacxn")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground15" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0, 0.5)
+material_override = SubResource("StandardMaterial3D_in2jp")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground16" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0, -0.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground17" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0, -1.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground18" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0, -2.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground19" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0, 2.5)
+material_override = SubResource("StandardMaterial3D_kvwul")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground20" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0, 1.5)
+material_override = SubResource("StandardMaterial3D_n1uv8")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground21" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0, 0.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground22" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0, -0.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground23" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0, -1.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground24" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0, -2.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground25" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5, 0, 2.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground26" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5, 0, 1.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground27" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5, 0, 0.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground28" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5, 0, -0.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground29" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5, 0, -1.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground30" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5, 0, -2.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground31" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, 0, 2.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground32" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, 0, 1.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground33" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, 0, 0.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground34" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, 0, -0.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground35" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, 0, -1.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Ground36" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5, 0, -2.5)
+material_override = SubResource("StandardMaterial3D_0leif")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof1" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -2.5, 1.4, -2.5)
+material_override = SubResource("StandardMaterial3D_dw0di")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof2" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -2.5, 1.4, -1.5)
+material_override = SubResource("StandardMaterial3D_pbw32")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof3" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -2.5, 1.4, -0.5)
+material_override = SubResource("StandardMaterial3D_bmha3")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof4" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -2.5, 1.4, 0.5)
+material_override = SubResource("StandardMaterial3D_inkyp")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof5" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -2.5, 1.4, 1.5)
+material_override = SubResource("StandardMaterial3D_hj4aw")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof6" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -2.5, 1.4, 2.5)
+material_override = SubResource("StandardMaterial3D_mt8kl")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof7" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -1.5, 1.4, -2.5)
+material_override = SubResource("StandardMaterial3D_y6h4y")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof8" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -1.5, 1.4, -1.5)
+material_override = SubResource("StandardMaterial3D_hrhul")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof9" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -1.5, 1.4, -0.5)
+material_override = SubResource("StandardMaterial3D_bnjwq")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof10" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -1.5, 1.4, 0.5)
+material_override = SubResource("StandardMaterial3D_5fi4b")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof11" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -1.5, 1.4, 1.5)
+material_override = SubResource("StandardMaterial3D_g00j8")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof12" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -1.5, 1.4, 2.5)
+material_override = SubResource("StandardMaterial3D_ebhli")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof13" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -0.5, 1.4, -2.5)
+material_override = SubResource("StandardMaterial3D_lja40")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof14" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -0.5, 1.4, -1.5)
+material_override = SubResource("StandardMaterial3D_f3d48")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof15" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -0.5, 1.4, -0.5)
+material_override = SubResource("StandardMaterial3D_0pnu5")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof16" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -0.5, 1.4, 0.5)
+material_override = SubResource("StandardMaterial3D_5tg1m")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof17" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -0.5, 1.4, 1.5)
+material_override = SubResource("StandardMaterial3D_fhsqu")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof18" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, -0.5, 1.4, 2.5)
+material_override = SubResource("StandardMaterial3D_grnx8")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof19" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 0.5, 1.4, -2.5)
+material_override = SubResource("StandardMaterial3D_8c1v4")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof20" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 0.5, 1.4, -1.5)
+material_override = SubResource("StandardMaterial3D_n4aas")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof21" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 0.5, 1.4, -0.5)
+material_override = SubResource("StandardMaterial3D_e6a0y")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof22" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 0.5, 1.4, 0.5)
+material_override = SubResource("StandardMaterial3D_o7jfh")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof23" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 0.5, 1.4, 1.5)
+material_override = SubResource("StandardMaterial3D_26ddi")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof24" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 0.5, 1.4, 2.5)
+material_override = SubResource("StandardMaterial3D_165u2")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof25" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 1.5, 1.4, -2.5)
+material_override = SubResource("StandardMaterial3D_ja3by")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof26" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 1.5, 1.4, -1.5)
+material_override = SubResource("StandardMaterial3D_h0oip")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof27" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 1.5, 1.4, -0.5)
+material_override = SubResource("StandardMaterial3D_ki4ao")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof28" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 1.5, 1.4, 0.5)
+material_override = SubResource("StandardMaterial3D_xw25c")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof29" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 1.5, 1.4, 1.5)
+material_override = SubResource("StandardMaterial3D_gjhok")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof30" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 1.5, 1.4, 2.5)
+material_override = SubResource("StandardMaterial3D_1f0d8")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof31" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 2.5, 1.4, -2.5)
+material_override = SubResource("StandardMaterial3D_vmyo0")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof32" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 2.5, 1.4, -1.5)
+material_override = SubResource("StandardMaterial3D_o5jor")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof33" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 2.5, 1.4, -0.5)
+material_override = SubResource("StandardMaterial3D_2k1lt")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof34" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 2.5, 1.4, 0.5)
+material_override = SubResource("StandardMaterial3D_b4uk8")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof35" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 2.5, 1.4, 1.5)
+material_override = SubResource("StandardMaterial3D_b7im7")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="Roof36" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 7.54979e-08, 0, -7.54979e-08, -0.5, 2.5, 1.4, 2.5)
+material_override = SubResource("StandardMaterial3D_x6kok")
+mesh = SubResource("PlaneMesh_fi5tb")
+
+[node name="MapWall" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-4.45856e-09, 0, -6, 0, 1.5, 0, 0.102, 0, -2.62268e-07, 3.72529e-08, 0.7, -3)
+material_override = SubResource("StandardMaterial3D_5artr")
+mesh = SubResource("BoxMesh_lsu7n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/MapWall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/MapWall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rwgtc")
+
+[node name="MapWall2" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-4.45856e-09, 0, -6, 0, 1.5, 0, 0.102, 0, -2.62268e-07, 3.72529e-08, 0.7, 3)
+material_override = SubResource("StandardMaterial3D_5artr")
+mesh = SubResource("BoxMesh_lsu7n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/MapWall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/MapWall2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rwgtc")
+
+[node name="MapWall3" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-0.102, 0, 5.24537e-07, 0, 1.5, 0, -8.91712e-09, 0, -6, 3, 0.7, 1.41561e-07)
+material_override = SubResource("StandardMaterial3D_5artr")
+mesh = SubResource("BoxMesh_lsu7n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/MapWall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/MapWall3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rwgtc")
+
+[node name="MapWall4" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-0.102, 0, 5.24537e-07, 0, 1.5, 0, -8.91712e-09, 0, -6, -3, 0.7, 1.41561e-07)
+material_override = SubResource("StandardMaterial3D_5artr")
+mesh = SubResource("BoxMesh_lsu7n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/MapWall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/MapWall4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rwgtc")
+
+[node name="Computer1" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-0.2, 0, -8.74228e-08, 0, 0.9, 0, 1.74846e-08, 0, -1, -2.1, 0.360048, 1.5)
+material_override = SubResource("StandardMaterial3D_ldxkf")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Computer1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Computer1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Computer7" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-1.49012e-08, 0, 1, 0, 0.9, 0, -0.2, 0, -7.45058e-09, -2.5, 0.360048, 2.1)
+material_override = SubResource("StandardMaterial3D_kwinj")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Computer7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Computer7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Computer2" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.2, 0, 1.74846e-07, 0, 0.9, 0, -3.49691e-08, 0, 1, -2.1, 0.360048, 0.5)
+material_override = SubResource("StandardMaterial3D_aa7sa")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Computer2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Computer2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Computer3" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-0.181262, 0, -0.422618, 0, 0.9, 0, 0.0845237, 0, -0.906308, -0.0999998, 0.360048, 0.5)
+material_override = SubResource("StandardMaterial3D_ohqpj")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Computer3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Computer3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Wall4" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.194575, 0, -0.647931, 0, 1.4, 0, 0.163268, 0, 0.772172, 2, 0.7, -2)
+material_override = SubResource("StandardMaterial3D_wb1p3")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Wall4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Wall5" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.254, 0, 5.97416e-08, 0, 1.4, 0, -1.50539e-08, 0, 1.008, 1.7, 0.7, -1.2)
+material_override = SubResource("StandardMaterial3D_xmfx7")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Wall5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Wall5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Wall6" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.192601, 0, 0.640309, 0, 1.38375, 0, -0.161612, 0, 0.76309, -2.3, 0.7, -1.8)
+material_override = SubResource("StandardMaterial3D_xmfx7")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Wall6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Wall6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Door" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-1.71264e-07, 0, 1, 0, 1, 0, -0.1, 0, -1.71264e-06, -1.00088, 0.5, 2.92626)
+material_override = SubResource("StandardMaterial3D_cbtlw")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Door"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Door/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="ExitDoor" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(0.1, 0, 1.66893e-06, 0, 1, 0, -1.66893e-07, 0, 1, 2.89912, 0.5, -0.07374)
+material_override = SubResource("StandardMaterial3D_cbtlw")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/ExitDoor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/ExitDoor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Wall3" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-2.23517e-08, 0, 0.996144, 0, 1.38375, 0, -0.251423, 0, -1.19209e-07, 2.3, 0.7, 1)
+material_override = SubResource("StandardMaterial3D_xmfx7")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Wall3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="WoodBox2" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 2.7, 0.2, 2.1)
+material_override = SubResource("StandardMaterial3D_a5873")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/WoodBox2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/WoodBox2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="WoodBox1" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-0.286788, 0, 0.409576, 0, 0.5, 0, -0.409576, 0, -0.286788, 0.6, 0.2, -2.2)
+material_override = SubResource("StandardMaterial3D_a5873")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/WoodBox1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/WoodBox1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="WoodBigBox1" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 1.6, 0, -0.5, 0, -2.18557e-08, 0.1, 0.7, -2.6)
+material_override = SubResource("StandardMaterial3D_ysu25")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/WoodBigBox1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/WoodBigBox1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Box1" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-2.18557e-08, 0, 0.6, 0, 0.5, 0, -0.5, 0, -2.62268e-08, 0.7, 0.260048, 2.7)
+material_override = SubResource("StandardMaterial3D_l06ap")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Box1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Box1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Box2" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-2.18557e-08, 0, 0.6, 0, 0.5, 0, -0.5, 0, -2.62268e-08, 0.7, 0.260048, 2.2)
+material_override = SubResource("StandardMaterial3D_xiuoq")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Box2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Box2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Box3" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-2.18557e-08, 0, 0.6, 0, 0.5, 0, -0.5, 0, -2.62268e-08, 0.7, 0.260048, 1.7)
+material_override = SubResource("StandardMaterial3D_0axit")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Box3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Box3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Box4" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-2.18557e-08, 0, 0.6, 0, 0.5, 0, -0.5, 0, -2.62268e-08, 0.7, 0.260048, 1.2)
+material_override = SubResource("StandardMaterial3D_alh4l")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Box4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Box4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Computer4" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-0.2, 0, -8.9407e-08, 0, 0.9, 0, 7.45058e-09, 0, -1, 0.3, 0.360048, 1.4)
+material_override = SubResource("StandardMaterial3D_rxg27")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Computer4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Computer4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="Computer5" type="MeshInstance3D" parent="Level1"]
+transform = Transform3D(-0.2, 0, -8.9407e-08, 0, 0.9, 0, 7.45058e-09, 0, -1, 0.3, 0.360048, 2.4)
+material_override = SubResource("StandardMaterial3D_rxg27")
+mesh = SubResource("BoxMesh_ieddw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level1/Computer5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Computer5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vt8no")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Level1"]
+environment = SubResource("Environment_4upfs")
+
+[node name="Luz" type="DirectionalLight3D" parent="Level1/WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.8, 0)
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="Walker" parent="Enemies" instance=ExtResource("17_aymvu")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -1.2, 0, 0)
+
+[node name="Walker2" parent="Enemies" instance=ExtResource("17_aymvu")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -1.6, 0, -2)
+
+[node name="Walker3" parent="Enemies" instance=ExtResource("17_aymvu")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -0.517999, 0, -2.4)
+
+[node name="Walker4" parent="Enemies" instance=ExtResource("17_aymvu")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 2.5, 0, -1.57776)
+
+[node name="Walker5" parent="Enemies" instance=ExtResource("17_aymvu")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 2.1, 0, 2.42224)
+
+[node name="Walker6" parent="Enemies" instance=ExtResource("17_aymvu")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -2.0296, 0, -1.07776)
+
+[node name="Guard" parent="Enemies" groups=["guard"] instance=ExtResource("18_w7mu7")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 1.83312, 0, 0)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+
+[node name="Guard2" parent="Enemies" groups=["guard"] instance=ExtResource("18_w7mu7")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0.433123, 0, -1.1)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+
+[node name="Guard5" parent="Enemies" groups=["guard"] instance=ExtResource("18_w7mu7")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 1.33312, 0, -1.8)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+
+[node name="Guard3" parent="Enemies" groups=["guard"] instance=ExtResource("18_w7mu7")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 1.63709, 0, 1.3967)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+
+[node name="Guard4" parent="Enemies" groups=["guard"] instance=ExtResource("18_w7mu7")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -2.65792, 0, -0.00329602)
+axis_lock_linear_x = true
+axis_lock_linear_z = true
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("16_uwakn")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, -1.1, 0, 2.4)
+
+[node name="Ammo" parent="." instance=ExtResource("19_jo2ui")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.346, 0, 2.384)
+
+[node name="LevelChanger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 0)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelChanger"]
+shape = SubResource("BoxShape3D_yxbbq")
+
+[node name="Rifle" parent="." instance=ExtResource("20_1cvnw")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.64791, 0, 1.6085)
+
+[node name="Health" parent="." instance=ExtResource("21_6mg56")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0.895688, 0, -2.73306)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_drpe6")
+volume_db = -10.0
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("23_6m5ob")]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="body_entered" from="LevelChanger" to="." method="_on_area_3d_body_entered"]
